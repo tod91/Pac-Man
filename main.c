@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include "Shader.h"
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
@@ -71,6 +72,8 @@ int main() {
     // Set the viewport size and callback function
     glViewport(0, 0, 800, 600);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+   //char* str =  read_file("C:\\Users\\todor.ivanov\\Desktop\\shader.vs");
+    BuildShader("shaders/shader.vs", "shaders/shader.fs");
 
     while (!glfwWindowShouldClose(window)) {
         // Process input
