@@ -71,11 +71,13 @@ int main() {
 
     // Set the viewport size and callback function
     glViewport(0, 0, 800, 600);
-    glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-   //char* str =  read_file("C:\\Users\\todor.ivanov\\Desktop\\shader.vs");
-    BuildShader("shaders/shader.vs", "shaders/shader.fs");
 
+    unsigned ID = 0;
+    BuildShader("shaders/shader.vs", "shaders/shader.fs", &ID);
+    Use(ID);
     while (!glfwWindowShouldClose(window)) {
+
+        
         // Process input
         processInput(window);
 

@@ -6,6 +6,11 @@
 
 typedef unsigned int ShaderID;
 
-ReturnCode BuildShader(const char* vertexPath, const char* fragmentPath);
-char* read_file(const char* filename);
+ReturnCode BuildShader(const char* vertexPath, const char* fragmentPath, unsigned* ID);
+
+void Use(unsigned ID);
+
+void SetBool(const char* name, int value, unsigned ID);
+void SetInt(const char* name, int value, unsigned ID);
+void SetFloat(const char* name, float value, unsigned ID);
 #endif
