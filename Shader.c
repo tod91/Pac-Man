@@ -83,16 +83,16 @@ ReturnCode BuildShader(const char* vertexPath, const char* fragmentPath, unsigne
     };
 
     // shader Program
-    ID = glCreateProgram();
-    glAttachShader(ID, vertex);
-    glAttachShader(ID, fragment);
-    glLinkProgram(ID);
+    *ID = glCreateProgram();
+    glAttachShader(*ID, vertex);
+    glAttachShader(*ID, fragment);
+    glLinkProgram(*ID);
 
     // print linking errors if any
-    glGetProgramiv(ID, GL_LINK_STATUS, &success);
+    glGetProgramiv(*ID, GL_LINK_STATUS, &success);
     if (!success)
     {
-        glGetProgramInfoLog(ID, 512, NULL, infoLog);
+        glGetProgramInfoLog(*ID, 512, NULL, infoLog);
         printf("ERROR::SHADER::VERTEX::COMPILATION_FAILED\n%s", infoLog);
     }
 
