@@ -1,0 +1,6 @@
+#ifndef PACMANPROJECT_GAMEMAPSTRUCTURE_H
+#define PACMANPROJECT_GAMEMAPSTRUCTURE_H
+
+void gameMapInit(int ***matrix, int rows, int columns);
+
+#endif //PACMANPROJECT_GAMEMAPSTRUCTURE_H
