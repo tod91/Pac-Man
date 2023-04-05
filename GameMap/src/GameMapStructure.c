@@ -9,14 +9,14 @@ typedef struct gameMap {
 } gameMap;
 
 void gameMapInit(int ***matrix, int rows, int columns) {
-    int i = 0;
-    *matrix = (int **) calloc(rows, sizeof(int *));
+
+    *matrix =  malloc(sizeof(int *) * rows);
     if (*matrix == NULL) {
         //TODO err handling here
         return;
     }
-    for (i = 0; i < rows; i++) {
-        (*matrix)[i] = (int *) calloc(columns, sizeof(int));
+    for (int i = 0; i < rows; i++) {
+        (*matrix)[i] = calloc(columns,sizeof(int));
         if ((*matrix)[i] == NULL){
             //TODO err handling here
             return;
@@ -25,7 +25,7 @@ void gameMapInit(int ***matrix, int rows, int columns) {
 
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < columns; ++j) {
-            printf("--%d--", matrix[i][j]);
+            printf("--%d--", (*matrix)[i][j]);
 
         }
         puts("\n");
