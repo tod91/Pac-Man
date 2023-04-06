@@ -6,16 +6,30 @@
 #include "GameMap/GameMapStructure.h"
 #include "Ghost/GhostStructure.h"
 #include "PlayerStructure.h"
-
+#include <windows.h>
 int main() {
     Player *player = NULL; // Obj of Player
-    Ghost  *ghost = NULL; // Obj of Ghost
+    Ghost *ghost = NULL; // Obj of Ghost
     int **maze = NULL; // Obj of map 2dArray
 
-    playerInit(&player, 0,0);
-    ghostInit(&ghost, 5,5);
-    gameMapInit(&maze, 10,10);
+    playerInit(&player, 0, 0);
+    ghostInit(&ghost, 9, 9);
+    gameMapInit(&maze, 10, 10);
+    maze[5][5] = 5;
+    maze[5][6] = 5;
+    maze[5][7] = 5;
+    maze[4][5] = 5;
+    maze[4][6] = 5;
+    maze[4][7] = 5;
 
+
+    while (1) {
+        print_maze(getPlayerPositionX(player), getPlayerPositionY(player), getGhostPositionX(ghost),
+                   getGhostPositionY(ghost),  maze, 10 , 10);
+        move_player(player, maze, 10, 10);
+        system("cls");
+    }
+    return 0;
 }
 
 

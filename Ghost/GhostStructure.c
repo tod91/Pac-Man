@@ -18,3 +18,10 @@ void ghostInit(Ghost **self, int x, int y){
     (*self)->x = x;
     (*self)->y = y;
 }
+
+int getGhostPositionX(Ghost *ghost){
+    return  ghost->x;
+}
+int getGhostPositionY(Ghost *ghost){
+    return  ghost->y;
+}
