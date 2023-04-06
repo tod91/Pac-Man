@@ -3,9 +3,9 @@
 #include <GLFW/glfw3.h>
 #include "Shader.h"
 
-#include "GameMap/inc/GameMapStructure.h"
-#include "Ghost/inc/GhostStructure.h"
-#include "Player/inc/PlayerStructure.h"
+#include "GameMap/GameMapStructure.h"
+#include "Ghost/GhostStructure.h"
+#include "PlayerStructure.h"
 
 int main() {
     Player *player = NULL; // Obj of Player
@@ -15,7 +15,7 @@ int main() {
     playerInit(&player, 0,0);
     ghostInit(&ghost, 5,5);
     gameMapInit(&maze, 10,10);
-    int a = 5;
+
 }
 
 

@@ -1,4 +1,4 @@
-#include "../inc/GhostStructure.h"
+#include "GhostStructure.h"
 #include "malloc.h"
 
 typedef struct Ghost {

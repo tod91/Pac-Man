@@ -1,4 +1,4 @@
-#include "../inc/PlayerStructure.h"
+#include "PlayerStructure.h"
 #include "malloc.h"
 
 typedef struct Player {

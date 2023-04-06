@@ -1,4 +1,4 @@
-#include "../inc/GhostsMovement.h"
+#include "GhostsMovement.h"
 
 #include <stdio.h>
 #include <stdlib.h>

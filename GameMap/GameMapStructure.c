@@ -1,4 +1,4 @@
-#include "../inc/GameMapStructure.h"
+#include "GameMapStructure.h"
 #include "malloc.h"
 #include <stdio.h>
 
